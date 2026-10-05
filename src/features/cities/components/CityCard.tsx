@@ -10,7 +10,7 @@ export default function CityCard({ city }: { city: City }) {
           <h3 className="font-bold text-xl leading-[30px] text-white">
             {city.name}
           </h3>
-          <p className="text-white">189 Offices</p>
+          <p className="text-white">{city.officeCount} Offices</p>
         </div>
         <Image
           height={140}

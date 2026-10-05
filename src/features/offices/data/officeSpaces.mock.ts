@@ -1,0 +1,73 @@
+import { OfficeSpace } from "./../types/officeSpace.type";
+export const officeSpaces: OfficeSpace[] = [
+  {
+    id: 1,
+    title: "Jade Office Space",
+    slug: "jade-office-space",
+    price: 1200000,
+    duration: "Monthly",
+    address: "123 Main St, City, State 12345",
+    about: "A beautiful office space in the heart of the city.",
+    location: "Jakarta",
+    rating: 4.5,
+    tags: ["Modern"],
+    image: "/assets/images/thumbnails/thumbnails-1.png",
+    images: [
+      "/assets/images/thumbnails/thumbnail-details-1.png",
+      "/assets/images/thumbnails/thumbnail-details-2.png",
+      "/assets/images/thumbnails/thumbnail-details-3.png",
+    ],
+    features: [
+      "Free WiFi",
+      "Meeting Rooms",
+      "Printing Services",
+      "24/7 Access",
+      "Privacy",
+      "Free Snack & Coffee",
+    ],
+    salesContacts: [
+      {
+        id: 1,
+        name: "John Doe",
+        role: "Sales Manager",
+        photo: "/assets/images/photos/photo-1.png",
+      },
+    ],
+    isFullyBooked: false,
+  },
+  {
+    id: 2,
+    title: "BCA Tower Office Space",
+    slug: "bca-tower-office-space",
+    price: 1500000,
+    duration: "Monthly",
+    address: "123 Main St, City, State 12345",
+    about: "A beautiful office space in the heart of the city.",
+    location: "Jakarta",
+    rating: 4.8,
+    tags: ["Popular"],
+    image: "/assets/images/thumbnails/thumbnails-2.png",
+    images: [
+      "/assets/images/thumbnails/thumbnail-details-4.png",
+      "/assets/images/thumbnails/thumbnail-details-5.png",
+      "/assets/images/thumbnails/thumbnail-details-3.png",
+    ],
+    features: [
+      "Free WiFi",
+      "24/7 Access",
+      "Meeting Rooms",
+      "Printing Services",
+      "Privacy",
+      "Free Snack & Coffee",
+    ],
+    salesContacts: [
+      {
+        id: 1,
+        name: "Jane Doe",
+        role: "Sales Manager",
+        photo: "/assets/images/photos/photo-2.png",
+      },
+    ],
+    isFullyBooked: false,
+  },
+];
