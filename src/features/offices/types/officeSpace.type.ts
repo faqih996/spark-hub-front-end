@@ -22,3 +22,10 @@ export type SalesContact = {
   role: string;
   photo: string;
 };
+
+export type Contact = {
+  id: number;
+  name: string;
+  role: string;
+  photo: string;
+};

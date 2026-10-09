@@ -3,14 +3,42 @@ import Navbar from "@/src/components/Navbar";
 import { cities } from "@/src/features/cities/data/cities.mock";
 import OfficeSpaceCard from "@/src/features/offices/components/OfficeSpaceCard";
 import { officeSpaces } from "@/src/features/offices/data/officeSpaces.mock";
+import { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { title } from "process";
 
-type Props = {
-  params: Promise<{
-    slug: string;
-  }>;
-};
+type Props = { params: Promise<{ slug: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const city = cities.find((item) => item.slug === slug);
+  if (!city) {
+    return {
+      title: "City not found",
+      description: "The city you're looking for does not exist",
+    };
+  }
+  const fullImageUrl = city.image.startsWith("http")
+    ? city.image
+    : `https://yourdomain.com${city.image}`;
+  return {
+    title: { absolute: `${city.name} - Office` },
+    description: `Cari kantor terbaik di ${city.name}.`,
+    openGraph: {
+      title: `${city.name} - Office Space`,
+      description: `Temukan ruang kantor di kota ${city.name}`,
+      images: [fullImageUrl],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${city.name} - Metro Space`,
+      description: `Temukan ruang kantor di kota ${city.name}`,
+      images: [fullImageUrl],
+    },
+    alternates: { canonical: `https://yourdomain.com/city/${slug}` },
+  };
+}
 
 export default async function CityDetailPage({ params }: Props) {
   const { slug } = await params;
