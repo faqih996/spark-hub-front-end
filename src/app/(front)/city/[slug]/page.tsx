@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: `${city.name} - Metro Space`,
+      title: `${city.name} - Spark Hub`,
       description: `Temukan ruang kantor di kota ${city.name}`,
       images: [fullImageUrl],
     },

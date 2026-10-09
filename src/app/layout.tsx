@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Metrospace - Space for your work activities",
-    template: "%s | Metrospace",
+    default: "Spark Hub - Space for your work activities",
+    template: "%s | Spark Hub",
   },
   description: "Platform terpercaya untuk cari tempat kerja remote.",
   keywords: ["Work Space", "Kantor", "Freelance", "Metrospace", "Remote job"],
